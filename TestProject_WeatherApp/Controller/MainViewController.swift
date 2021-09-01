@@ -9,9 +9,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var weatherTableView: UITableView = {
+    private lazy var weatherTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        
+        tableView.toAutoLayout()
+        tableView.register(CityTableViewCell.self, forCellReuseIdentifier: String(describing: CityTableViewCell.self))
+        tableView.delegate = self
+        tableView.dataSource = self
         return tableView
     }()
     
@@ -38,4 +41,17 @@ extension MainViewController {
         ]
         NSLayoutConstraint.activate(constraints)
     }
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CityTableViewCell.self), for: indexPath) as! CityTableViewCell
+        return cell
+    }
+    
+    
 }
