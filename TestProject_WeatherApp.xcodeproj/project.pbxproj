@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2775132526DF91BD00C839AF /* UIView + AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775132426DF91BD00C839AF /* UIView + AutoLayout.swift */; };
 		2775132726DF92AF00C839AF /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775132626DF92AF00C839AF /* CityTableViewCell.swift */; };
+		2775132A26DF95FC00C839AF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775132926DF95FC00C839AF /* NetworkService.swift */; };
 		27EE84DF26D6226B00FDCFA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE84DE26D6226B00FDCFA9 /* AppDelegate.swift */; };
 		27EE84E126D6226B00FDCFA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE84E026D6226B00FDCFA9 /* SceneDelegate.swift */; };
 		27EE84E626D6226B00FDCFA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EE84E426D6226B00FDCFA9 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		2775132426DF91BD00C839AF /* UIView + AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + AutoLayout.swift"; sourceTree = "<group>"; };
 		2775132626DF92AF00C839AF /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		2775132926DF95FC00C839AF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		27EE84DB26D6226B00FDCFA9 /* TestProject_WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject_WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EE84DE26D6226B00FDCFA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27EE84E026D6226B00FDCFA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2775132826DF95EC00C839AF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2775132926DF95FC00C839AF /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		27EE84D226D6226B00FDCFA9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		27EE84DD26D6226B00FDCFA9 /* TestProject_WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				2775132826DF95EC00C839AF /* Network */,
 				27EE84F526D622A500FDCFA9 /* Helpers */,
 				27EE84F426D622A000FDCFA9 /* Model */,
 				27EE84F326D6229C00FDCFA9 /* View */,
@@ -179,6 +190,7 @@
 				27EE84DF26D6226B00FDCFA9 /* AppDelegate.swift in Sources */,
 				2775132726DF92AF00C839AF /* CityTableViewCell.swift in Sources */,
 				27EE84E126D6226B00FDCFA9 /* SceneDelegate.swift in Sources */,
+				2775132A26DF95FC00C839AF /* NetworkService.swift in Sources */,
 				2775132526DF91BD00C839AF /* UIView + AutoLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

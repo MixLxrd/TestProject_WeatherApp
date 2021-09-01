@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    private lazy var searchController = UISearchController(searchResultsController: nil)
+    
     private lazy var weatherTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.toAutoLayout()
@@ -22,7 +24,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
-        
     }
 
 }
@@ -31,6 +32,12 @@ extension MainViewController {
     private func setupLayout() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isHidden = false
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        definesPresentationContext = true
+        
         title = "Weather"
         view.addSubview(weatherTableView)
         let constraints = [
@@ -50,8 +57,18 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CityTableViewCell.self), for: indexPath) as! CityTableViewCell
+        cell.textLabel?.text = "City"
+        cell.detailTextLabel?.text = "Temperature"
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension MainViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
 }
