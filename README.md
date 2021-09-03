@@ -1,7 +1,9 @@
 # TestProject_WeatherApp
 
-Use Cocoapods - Alamofire
+Use Cocoapods - Alamofire 
+
 Use WebKit, CoreLocation, UIKit
+
 Use Yandex API for weather app
 
 Загружается список из 10 городов. При нажатии на ячейку с городом переход на ссылку с подробной информацией о погоде в городе
