@@ -126,7 +126,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CityTableViewCell.self), for: indexPath) as! CityTableViewCell
         
         cell.nameCityTextLabel.text = String(describing: cities[indexPath.row].geoObject.locality.name)
-        cell.temperatureTextLabel.text = String(describing: cities[indexPath.row].fact.temp) + "'C"
+        cell.temperatureTextLabel.text = String(describing: cities[indexPath.row].fact.temp) + "°C"
         cell.conditionTextLabel.text = String(describing: cities[indexPath.row].fact.condition)
         
         
